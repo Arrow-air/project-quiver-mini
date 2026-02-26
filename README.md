@@ -45,4 +45,8 @@ Arrow DAO is an experiment in open, community-led hardware development. Contribu
 
 ## License
 
-[Apache 2.0](LICENSE)
+Hardware designs (CAD files, schematics, PCB layouts, manufacturing files) are licensed under the **[CERN Open Hardware Licence Version 2 - Strongly Reciprocal (CERN-OHL-S v2)](LICENSE)**.
+
+Software (firmware, scripts, tools) is licensed under the **[GNU General Public License v3.0 (GPL-3.0)](LICENSE-SOFTWARE)**.
+
+Both licenses require that derivative works remain open source under the same terms.
