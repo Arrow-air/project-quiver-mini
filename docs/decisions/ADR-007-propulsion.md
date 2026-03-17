@@ -1,44 +1,74 @@
-# ADR-007: Propulsion — Open Selection, ~3.5kg Thrust/Rotor at 6S
+# ADR-007: Propulsion — Hobbywing X6-SE 380KV (Primary)
 
 **Status:** Accepted  
-**Date:** 2026-03-05  
+**Date:** 2026-03-17 (updated from 2026-03-05)  
 **Discussion:** [Design Q4: Propulsion](https://github.com/Arrow-air/project-quiver-mini/discussions/7)
 
 ## Decision
 
-Motor selection is **not locked to a single model**. Quiver Mini v1 targets a performance spec: **~3.5kg thrust/rotor at 6S** (50% hover throttle at 7kg MTOW). The arm tip will use a universal or multi-option mount — not locked to one bolt pattern.
+**Primary motor: Hobbywing X6-SE 380KV** with HF18×6.0" prop.
 
-## Context
+Motor selection is not locked — builders may substitute from the validated alternatives list below — but the Hobbywing X6-SE is the reference configuration for frame design, PCB layout, and parameter files.
 
-The original assumption was MAD 4x08 400KV (used in Kestrel). Community input during the design phase established that MAD 4x08 is insufficient for the 7kg MTOW ceiling.
+## Rationale
+
+- **5.5kg max thrust/rotor** → 3.1:1 T/W at 7kg MTOW; hovers at ~32% throttle
+- **Integrated motor+ESC+prop** — one BOM item, clean install, no ESC compatibility questions
+- **CAN protocol** — individual motor RPM telemetry, ESC health monitoring, voltage/current per motor in ArduPilot; valuable for a serious sensor platform
+- **Hobbywing ecosystem** — Arrow team has existing experience with Hobbywing X-series on full Quiver; spare parts, troubleshooting knowledge carry over
+- **6S compatible** ✅
+- **~$70-80/unit** — competitive
+
+The ~400g weight premium over lighter alternatives is accepted. Dry weight target is revised to **≤3.0kg** (from 2.5kg) to reflect this.
 
 ## Performance Spec
 
-| Parameter | Target |
-|-----------|--------|
-| Thrust per rotor | ~3.5kg at 6S (50% throttle) |
-| Battery | 6S |
-| Prop diameter | ~17–18" (driven by motor choice) |
-| Configuration | Quad |
+| Parameter | Target | Hobbywing X6-SE |
+|-----------|--------|-----------------|
+| Thrust per rotor | ≥3.5kg at 6S | **5.5kg max** ✅ |
+| Hover throttle (7kg MTOW) | ≤60% | **~32%** ✅ |
+| Battery | 6S | 6S ✅ |
+| Prop diameter | 17–18" | HF18×6.0" ✅ |
+| CAN telemetry | preferred | ✅ |
 
-## Reference Motors (not locked)
+## Reference Configuration
 
-| Motor | Max Thrust | Props | Weight | Notes |
-|-------|-----------|-------|--------|-------|
-| T-Motor MN5008 KV340 | ~4.2kg | 17–18" | 135g | 6S-rated, leading candidate |
-| MAD 4x08 400KV | ~2.5kg | 15×4.8" | — | **Insufficient for 7kg ceiling** |
+| Parameter | Value |
+|-----------|-------|
+| Motor | Hobbywing X6-SE 380KV |
+| Prop | HF18×6.0" (included) |
+| ESC | Integrated |
+| Weight (motor+ESC+prop) | 348±5g per unit |
+| Arm tube diameter | **25mm** |
+| Max power | 1057W |
+| Recommended thrust/rotor | 2–2.5kg |
+| Max thrust/rotor | 5.5kg |
+| CAN protocol | Yes |
+| Price (est.) | ~$70–80/unit |
+
+**Note:** Arm tube diameter is 25mm — frame spec must use 25mm CF tubes, not 20mm.
+
+## Validated Alternatives
+
+| Motor | Max Thrust | Weight (all-in) | Arm Tube | CAN | ~Price | Notes |
+|-------|-----------|-----------------|----------|-----|--------|-------|
+| **Hobbywing X6-SE 380KV** ✅ | 5.5kg | 348g | 25mm | ✅ | ~$75 | **Primary** |
+| T-Motor MN5008 KV340 | 4.2kg | ~270g (motor+ESC+prop) | 19mm bolt | ❌ | ~$120 | Confirmed backup |
+| SunnySky X4110S KV400 | ~3.0–3.5kg (est.) | 187g motor | — | ❌ | ~$40 | Needs bench validation |
 
 ## Supply Chain Principle (deltaecho)
 
-Before first build: document 2–3 validated motor options that satisfy the thrust, weight, and interface requirements. Avoid single-source dependency.
+Document 2–3 validated options before first build. Motor mount adapter at the arm tip must accommodate at minimum the Hobbywing 25mm clamp pattern and the T-Motor M3×4 bolt pattern.
 
-## Mount Design
+## Frame Implications
 
-- Universal/multi-option arm-tip interface
-- "Design the motor mount adapter" is a natural early bounty — well-scoped, doesn't require the full frame to be complete
+- **Arm tube: 25mm CF round tube** (revised from 20mm)
+- Wheelbase: ~700–730mm diagonal (18" props)
+- Motor mount adapter bounty: accommodate Hobbywing + T-Motor mount patterns
+- Dry weight target revised to **≤3.0kg**
 
 ## Consequences
 
-- Wheelbase will be driven by propulsion choice (~17–18" props → larger than Kestrel's 15" prop config)
-- MAD 4x08 integrated arm sets are no longer the primary path (though MAD may offer larger options in this thrust range worth evaluating)
-- Motor mount adapter becomes a community bounty
+- CAN bus wiring must be routed through arms to central PCB
+- PCB must include CAN interface (or FC handles CAN passthrough)
+- Heavier propulsion system than originally estimated — enclosure and arm design must account for this

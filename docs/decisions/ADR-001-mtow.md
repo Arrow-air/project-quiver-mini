@@ -25,7 +25,8 @@ The MTOW is the most consequential early decision — it drives frame geometry, 
 
 - Motor selection must target ~3.5kg thrust/rotor at 6S (see ADR-007)
 - MAD 4x08 400KV is **not sufficient** for the 7kg ceiling (2.5kg max/rotor at 50% throttle)
-- Frame geometry will be sized around the new propulsion system (~17–18" props)
+- Frame geometry will be sized around the new propulsion system (~17–18" props, 25mm arm tubes)
+- **Dry weight target: ≤3.0kg** (revised from 2.5kg after Hobbywing X6-SE selection; motor+ESC+prop: 1,392g)
 - Payload budget: ~1.5–2kg usable after structural + electronics weight
 - Regulatory: EU A3 category above 4kg; operators should plan accordingly
 
