@@ -1,6 +1,7 @@
 # Bounty: Quiver Mini Frame Design
 
 **Status:** Open  
+**Reward:** 8,000 $ARROW  
 **Repo:** [Arrow-air/project-quiver-mini](https://github.com/Arrow-air/project-quiver-mini)  
 **Related ADRs:** ADR-001 (MTOW), ADR-003 (Quad), ADR-006 (Arms), ADR-007 (Propulsion)
 
