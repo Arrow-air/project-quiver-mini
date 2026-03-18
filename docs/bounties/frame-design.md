@@ -43,7 +43,7 @@ The frame has two distinct material zones:
 
 - **Internal geometry:** Hollow structural forms where possible (not flat plates, not open U-channels). Internal ribbing and shell walls carry loads more effectively than solid infill.
 - **Arm-to-body joint:** Interlocking geometry (dovetail or equivalent) to carry shear loads in the plastic geometry itself — secured with embedded hex nuts or heat-set inserts, not plastic threads
-- **Electronics bay:** Designer defines the enclosure volume; PCB will be sized to fit. Document your interior dimensions clearly in the deliverables.
+- **Electronics bay:** Design for a minimum interior footprint of **~190×130mm** and **~80mm height**. V1 reference components: Pixhawk 6C/6X (38×38mm, 30.5mm mount pattern), Raspberry Pi 4/5 (85×56mm), power distribution and wiring. Final design will use a custom Mini Main PCB + FC PCB sized to fit — document your actual interior dimensions clearly. Dual GPS: internal mounting provisions near the top of the body (antenna facing up); exact placement TBD pending PCB design. Obstacle avoidance sensor wiring: cable pass-throughs to body perimeter.
 - **FC mount:** Provision for soft-mount (TPU standoffs or M3 boss for silicone gel pads)
 - **Landing gear:** Integrated or bolt-on TPU printed legs; enough ground clearance for bottom attachment interface with compact payload (~80mm minimum clearance)
 - **Arm fold:** Foldable arms preferred for transport
