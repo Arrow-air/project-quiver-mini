@@ -26,6 +26,7 @@ A CAD design for the Quiver Mini v1 frame — a quad frame for a 7kg MTOW sensor
 | Attachment interface | Single bottom port, Quiver-compatible, centered on belly |
 | CAN wiring | Cable routing channels from arm tubes into central hub |
 | Power connector | XT90-S antispark, battery bay accessible without opening enclosure |
+| Battery bay | Design to fit 6S 22Ah reference pack: **200×95×75mm** (max envelope); Velcro strap mount, ~2kg |
 
 ---
 
