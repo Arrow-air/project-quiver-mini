@@ -75,9 +75,20 @@ The Quiver Main PCB is a useful reference, but Quiver is 14S and 25kg — Mini n
 
 ---
 
+## Stackup target
+
+**6-layer, 2mm FR4** — This is the recommended default, not left fully open.
+
+- **6 layers** — gives adequate separation between power planes, signal layers, and ground pours. Better EMI performance than 4-layer at this board complexity. JLCPCB supports 6-layer at reasonable cost.
+- **2mm thickness** — ~2× stiffer in bending vs standard 1.6mm. On a ~180×120mm board carrying heavy components (capacitors, connectors, MOSFETs), the extra rigidity reduces solder joint fatigue from motor vibration. This is a meaningful improvement for drone applications.
+- **Stackup guidance:** With 6 layers in 2mm you get better dielectric separation between signal and plane layers vs cramming 6 layers into 1.6mm — cleaner controlled-impedance routing and better plane isolation by default.
+
+Deviations from this target are acceptable with justification in the design notes.
+
+---
+
 ## Open to designer
 
-- Layer count and stackup (4-layer recommended minimum)
 - Connector placement and orientation
 - Thermal relief strategy for high-current traces
 - Optional: onboard IMU, barometer, or buzzer driver
@@ -111,3 +122,4 @@ The Quiver Main PCB is a useful reference, but Quiver is 14S and 25kg — Mini n
 - Coordinate with the frame designer on exact board outline — the 180×120mm target comes from the frame bounty interior spec (190×130mm bay) with margin. If you take the frame bounty first, define your interior dimensions and the PCB designer will size to fit.
 - Erick (<@421500183524671490>) is the primary point of contact for PCB questions and review.
 - Target fab: JLCPCB PCBA for first batch.
+
