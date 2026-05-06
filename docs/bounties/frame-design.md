@@ -25,9 +25,9 @@ A CAD design for the Quiver Mini v1 frame — a quad frame for a 7kg MTOW sensor
 | Diagonal wheelbase | ~700–730mm (motor-to-motor) |
 | Motor mount | Hobbywing X6-SE 25mm clamp (primary); T-Motor M3×4 bolt circle (secondary) |
 | Attachment interface | Single bottom port, Quiver-compatible, centered on belly |
-| CAN wiring | Cable routing channels from arm tubes into central hub |
+| ESC/signal wiring | Cable routing channels from arm tubes into central hub; support DSHOT/PWM v1 and leave room for future CAN wiring |
 | Power connector | XT90-S antispark, battery bay accessible without opening enclosure |
-| Battery bay | Design to fit 6S 22Ah reference pack: **200×95×75mm** (max envelope); Velcro strap mount, ~2kg |
+| Battery bay | Design to fit 6S 14Ah reference pack: **~200×75×65mm** target envelope; Velcro strap mount, ~1.6–1.8kg |
 
 ---
 
@@ -92,6 +92,6 @@ The frame has two distinct material zones:
 
 ## Resources
 
-- [ADR-007: Propulsion (Hobbywing X6-SE specs)](decisions/ADR-007-propulsion.md)
-- [Design brief](design-brief.md)
-- [Kestrel reference build](../reference-builds/kestrel/README.md)
+- [ADR-007: Propulsion (Hobbywing X6-SE specs)](../decisions/ADR-007-propulsion.md)
+- [Design brief](../design-brief.md)
+- Kestrel reference build (Julius) — documented in project notes; formal reference-build folder TBD

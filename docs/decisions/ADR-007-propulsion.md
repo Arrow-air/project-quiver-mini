@@ -72,3 +72,8 @@ Document 2–3 validated options before first build. Motor mount adapter at the 
 - CAN bus wiring must be routed through arms to central PCB
 - PCB must include CAN interface (or FC handles CAN passthrough)
 - Heavier propulsion system than originally estimated — enclosure and arm design must account for this
+
+
+## Implementation note — May 2026
+
+The first PCB bounty uses **DSHOT/PWM as the v1 ESC control baseline** for ArduPilot compatibility and lower integration risk. Hobbywing CAN telemetry remains valuable, but is treated as optional/future unless the PCB designer can include it cleanly without delaying the first board. Frame wiring should leave a path for future CAN even if v1 flies on DSHOT/PWM.
