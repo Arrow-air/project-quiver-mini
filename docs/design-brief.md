@@ -2,7 +2,7 @@
 
 This document summarizes the key design decisions for Quiver Mini. Decisions were made through community discussion in `#quiver-mini` on the Arrow Discord and are recorded in `docs/decisions/`.
 
-**Last updated:** 2026-03-05  
+**Last updated:** 2026-05-06  
 **Status:** v1 spec locked — moving to design phase
 
 ---
@@ -39,6 +39,20 @@ Full rationale in `docs/decisions/`. Summary:
 
 ---
 
+## v0.1 Implementation Baseline (May 2026)
+
+These defaults are used for the first frame and PCB bounty scopes. They refine the locked ADR direction without reopening the core design decisions.
+
+| Area | Baseline |
+|------|----------|
+| Reference motor | Hobbywing X6-SE 380KV primary; T-Motor MN5008 backup path |
+| Propeller | HF18×6.0-ish reference prop |
+| Frame geometry | ~700–730mm diagonal motor-to-motor wheelbase for 18" prop clearance |
+| Battery bay | 6S 14Ah reference pack, ~200×75×65mm target envelope |
+| ESC interface | DSHOT/PWM primary for PCB v1; CAN pads/headers optional/future for Hobbywing telemetry |
+| Attachment port | Single bottom Quiver-compatible interface only |
+| Power-on | XT90-S antispark, no dedicated pre-charge circuit for v1 |
+
 ## Reference Builds
 
 ### Kestrel (Julius / far1no)
@@ -70,8 +84,7 @@ From community input during the discussion phase:
 
 ## Next Steps
 
-- [ ] Enclosure CAD (bounty)
-- [ ] Motor mount adapter design (bounty — universal arm-tip interface)
-- [ ] Validate T-Motor MN5008 KV340 and 2 alternatives at 6S
-- [ ] Frame geometry / wheelbase calculation based on propulsion choice
+- [ ] Publish frame/enclosure CAD bounty
+- [ ] Publish PCB design bounty
+- [ ] Validate Hobbywing X6-SE + T-Motor MN5008 backup path at 6S
 - [ ] First-pass BOM
