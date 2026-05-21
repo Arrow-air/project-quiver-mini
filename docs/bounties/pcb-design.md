@@ -1,11 +1,17 @@
 # Bounty: Quiver Mini Main PCB Design
 
-**Status:** Open  
-**Reward:** 7,000 $ARROW  
-**Repo:** [Arrow-air/project-quiver-mini](https://github.com/Arrow-air/project-quiver-mini)  
-**Related ADRs:** ADR-001 (MTOW), ADR-002 (Enclosure), ADR-007 (Propulsion)
+- **Status:** Paused — not currently funded or actively managed
+- **Reward:** 7,000 $ARROW (draft / not active)
+- **Repo:** [Arrow-air/project-quiver-mini](https://github.com/Arrow-air/project-quiver-mini)
+- **Related ADRs:** ADR-001 (MTOW), ADR-002 (Enclosure), ADR-007 (Propulsion)
 
 ---
+
+## Current note
+
+This bounty spec is preserved as a draft for a future Quiver Mini restart. Arrow is not actively managing this bounty right now, and contributors should not assume the reward is available until the project is formally reprioritized.
+
+For near-term small-platform work, Kestrel reuses existing Quiver PCBs rather than requiring a new Mini PCB.
 
 ## What we need
 

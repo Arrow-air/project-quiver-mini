@@ -2,8 +2,8 @@
 
 This document summarizes the key design decisions for Quiver Mini. Decisions were made through community discussion in `#quiver-mini` on the Arrow Discord and are recorded in `docs/decisions/`.
 
-**Last updated:** 2026-05-06  
-**Status:** v1 spec locked — moving to design phase
+- **Last updated:** 2026-05-21
+- **Status:** Paused / community-maintained — v1 spec notes preserved, but active Arrow-managed clean-sheet development is on hold
 
 ---
 
@@ -18,7 +18,7 @@ These are inherited from Quiver or set by project goals:
 | Flight stack | ArduCopter | Proven, open-source |
 | Battery system | 6S | Right voltage class for 5–10kg; Kestrel build confirms |
 | Video/comms | SIYI camera + HM30 (likely) | Proven on Quiver; consistent ecosystem |
-| Open source | Apache 2.0 | Yes |
+| Open source | CERN-OHL-S v2 for hardware; GPL-3.0 for software | Keeps hardware/software derivatives open source |
 
 ---
 
@@ -39,9 +39,15 @@ Full rationale in `docs/decisions/`. Summary:
 
 ---
 
-## v0.1 Implementation Baseline (May 2026)
+## Current Project Direction (May 2026)
 
-These defaults are used for the first frame and PCB bounty scopes. They refine the locked ADR direction without reopening the core design decisions.
+Quiver Mini is paused as an actively managed clean-sheet project. The repo remains open for contributions, experiments, and design notes, but Arrow is not currently funding or coordinating the frame/PCB bounty path.
+
+Near-term small-platform energy is shifting toward documenting and flying Kestrel: Julius's 5kg-class flown reference build using the Quiver enclosure and existing Quiver PCBs. Kestrel is not the final Mini spec; it is the practical near-term platform and learning vehicle.
+
+## v0.1 Implementation Baseline (preserved)
+
+These defaults were prepared for the first frame and PCB bounty scopes. They refine the locked ADR direction without reopening the core design decisions. They are preserved for future restart, but should not be treated as active work items while the project is paused.
 
 | Area | Baseline |
 |------|----------|
@@ -56,7 +62,7 @@ These defaults are used for the first frame and PCB bounty scopes. They refine t
 ## Reference Builds
 
 ### Kestrel (Julius / far1no)
-*Personal build, parallel to the community design. Informs v1 decisions.*
+*Julius's flown 5kg-class reference build. Practical near-term small platform; informs any future Mini restart.*
 
 | Spec | Value |
 |------|-------|
@@ -84,7 +90,9 @@ From community input during the discussion phase:
 
 ## Next Steps
 
-- [ ] Publish frame/enclosure CAD bounty
-- [ ] Publish PCB design bounty
-- [ ] Validate Hobbywing X6-SE + T-Motor MN5008 backup path at 6S
-- [ ] First-pass BOM
+Active Arrow-managed Mini development is paused. If/when the project is restarted:
+
+- [ ] Review Kestrel flight/build data against the Mini v1 goals
+- [ ] Decide whether the clean-sheet Mini path is still needed and what it should optimize beyond Kestrel
+- [ ] Reconfirm or revise the v0.1 implementation baseline
+- [ ] Reopen frame/enclosure and PCB bounty scopes only after bandwidth/funding is available
