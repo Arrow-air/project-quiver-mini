@@ -1,17 +1,19 @@
 # Snapshot Proposal Draft: Quiver Mini v1 Development Fund
 
-**Status:** Draft — not yet submitted  
-**Proposed by:** thomasg  
-**Amount requested:** 25,000 $ARROW  
-**Target wallet:** TBD
+- **Status:** Paused draft — not active / not submitted
+- **Proposed by:** thomasg
+- **Amount requested:** 25,000 $ARROW
+- **Target wallet:** TBD
 
 ---
 
 ## Summary
 
-Allocate **25,000 $ARROW** to fund the technical development bounties required to bring Quiver Mini v1 from locked design decisions to a documented, repeatable first build.
+This draft is preserved for a possible future restart, but it is not active. Arrow is not currently pursuing the Quiver Mini bounty/Snapshot path.
 
-Quiver Mini is an Arrow community project to build a smaller, lighter Quiver variant — a 7kg MTOW open-source quad drone optimized for sensor payloads (cameras, LiDAR, thermal, multispectral). The project repo is live, design decisions are locked, and the first technical bounties are ready to post. This proposal funds the bounty pool.
+The original intent was to allocate **25,000 $ARROW** to fund the technical development bounties required to bring Quiver Mini v1 from locked design decisions to a documented, repeatable first build.
+
+Quiver Mini is an Arrow community project to build a smaller, lighter Quiver variant — a 7kg MTOW open-source quad drone optimized for sensor payloads (cameras, LiDAR, thermal, multispectral). The project repo is live and design decisions are preserved, but active clean-sheet development is paused while near-term small-platform work shifts toward documenting and flying Kestrel.
 
 ---
 
@@ -53,6 +55,8 @@ All bounties are paid in **$ARROW only** at an internal reference price of **$0.
 
 ## Process
 
+If this proposal is revived:
+
 - Bounties are posted individually to #grants-and-bounties as funding is confirmed
 - Claims via GitHub issue on [Arrow-air/project-quiver-mini](https://github.com/Arrow-air/project-quiver-mini)
 - Review and payment processed per the standard Arrow bounty guide
@@ -64,6 +68,7 @@ All bounties are paid in **$ARROW only** at an internal reference price of **$0.
 
 | Milestone | Target |
 |-----------|--------|
+| Project reprioritized / proposal revived | TBD |
 | Snapshot vote passes | TBD |
 | Frame design bounty claimed | Within 2 weeks of posting |
 | Frame CAD delivered | 4–6 weeks after claim |

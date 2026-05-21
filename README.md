@@ -15,22 +15,26 @@ Quiver is a capable 25kg VTOL platform — but it's expensive and complex to bui
 
 ## Status
 
-🟡 **Design phase** — community discussion open. See [`docs/design-brief.md`](docs/design-brief.md) for open questions.
+⏸️ **Paused / community-maintained** — Quiver Mini remains an open concept for a future purpose-built small Quiver platform, but Arrow is not actively managing clean-sheet Mini development right now.
+
+Contributions, experiments, and design notes are still welcome. Expect slower review and less active coordination until the project is reprioritized.
+
+Near-term small-platform work is shifting toward documenting and flying **Kestrel**, Julius's flown 5kg-class reference build that reuses existing Quiver electronics/PCBs.
 
 ## Reference Builds
 
 | Build | Author | Status | Notes |
 |-------|--------|--------|-------|
-| [Kestrel](reference-builds/kestrel/) | Julius (far1no) | Parts ordered | 5kg quad, MAD 4x08, 6S, Quiver body |
+| [Kestrel](reference-builds/kestrel/) | Julius (far1no) | Flown | 5kg quad, MAD 4x08, 6S, Quiver body + Quiver PCBs |
 
-Reference builds are community members' individual interpretations of the Quiver Mini concept. They inform the official design but are not the spec.
+Reference builds are community members' individual interpretations of the small-Quiver concept. Kestrel is being uploaded and documented separately as the practical near-term small platform/reference build; Quiver Mini remains the future clean-sheet design path.
 
 ## Repository Structure
 
 ```
 project-quiver-mini/
 ├── docs/
-│   ├── design-brief.md        # Open design questions for community discussion
+│   ├── design-brief.md        # Preserved design direction and paused-project status
 │   └── decisions/             # Log of design decisions and rationale
 ├── reference-builds/
 │   └── kestrel/               # Julius's Kestrel reference build
@@ -39,9 +43,9 @@ project-quiver-mini/
 
 ## Contributing
 
-This project is coordinated through the Arrow Discord server — join `#quiver-mini` to participate in design discussions.
+This project is currently paused rather than actively coordinated. Join the Arrow Discord server and use `#quiver-mini` for design discussion, but please assume maintainers may be slow to respond.
 
-Arrow DAO is an experiment in open, community-led hardware development. Contributions of all kinds are welcome: CAD, simulation, firmware, documentation, testing.
+Arrow DAO is an experiment in open, community-led hardware development. Contributions of all kinds are welcome: CAD, simulation, firmware, documentation, testing. For now, the most useful contributions are small, well-scoped notes, experiments, comparisons against Kestrel, or PRs that clearly improve the archived design direction without requiring heavy maintainer coordination.
 
 ## License
 

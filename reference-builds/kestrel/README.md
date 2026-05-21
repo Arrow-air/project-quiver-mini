@@ -1,12 +1,14 @@
 # Kestrel — Reference Build
 
-**Author:** Julius (far1no)  
-**Status:** Parts ordered, first build in progress (Feb 2026)  
-**Weight class:** ~5kg MTOW
+- **Author:** Julius (far1no)
+- **Status:** Flown; being documented as the practical near-term small platform/reference build
+- **Weight class:** ~5kg MTOW
 
 ---
 
-Kestrel is a personal build by Julius exploring the minimum viable Quiver Mini. Designed over a weekend hackathon in February 2026, it prioritizes maximum reuse of Quiver electronics to minimize new development.
+Kestrel is a personal build by Julius exploring a minimum viable small Quiver-class aircraft. Designed over a weekend hackathon in February 2026, it prioritizes maximum reuse of Quiver electronics to minimize new development.
+
+After Kestrel's first flights, Arrow is treating it as the practical near-term small platform/reference build while clean-sheet Quiver Mini development is paused.
 
 ## Key Specs
 
@@ -57,8 +59,8 @@ Kestrel is a personal build by Julius exploring the minimum viable Quiver Mini. 
 - ✅ MAD 4x08 + 15" props is a viable propulsion choice for 5kg
 - ✅ Quiver body size is functional (not optimal, but works)
 - ✅ Integrated motor-arm landing gear is a clean solution
-- ⏳ First flight data pending — will inform Quiver Mini design
+- ✅ First flights completed — use logs/build notes to inform any future Quiver Mini restart
 
 ## Files
 
-*CAD files to be added once build is complete and design is finalized.*
+*CAD files, logs, photos, and build notes to be added as they are cleaned up for publication.*
